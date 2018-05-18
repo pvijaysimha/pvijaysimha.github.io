@@ -103,7 +103,13 @@ function handleLogin(success) {
          stream = myStream; 
 			
          //displaying local video stream on the page 
-         localVideo.src = window.URL.createObjectURL(stream);
+         //localVideo.src = window.URL.createObjectURL(stream);
+	      
+	      try{
+        localVideo.srcObject = stream;
+    }catch (error){
+        localVideo.src = window.URL.createObjectURL(stream);
+    }
 			
          //using Google public stun server 
          var configuration = { 
@@ -117,7 +123,11 @@ function handleLogin(success) {
 			
          //when a remote user adds stream to the peer connection, we display it 
          yourConn.onaddstream = function (e) { 
-            remoteVideo.src = window.URL.createObjectURL(e.stream); 
+           try{
+        remoteVideo.srcObject = e.stream;
+    }catch (error){
+        remoteVideo.src = window.URL.createObjectURL(e.stream);
+    } 
          };
 			
          // Setup ice handling 
