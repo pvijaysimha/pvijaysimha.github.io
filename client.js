@@ -3,7 +3,7 @@ var name;
 var connectedUser;
   
 //connecting to our signaling server
-var conn = new WebSocket('ws://e3697706.ngrok.io');
+var conn = new WebSocket('wss://e3697706.ngrok.io');
   
 conn.onopen = function () { 
    console.log("Connected to the signaling server"); 
