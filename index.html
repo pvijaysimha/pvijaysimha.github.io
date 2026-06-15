@@ -1,83 +1,222 @@
-<html> 
- 
-   <head> 
-      <title>WebRTC Video Demo</title>
-      <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"/>
-   </head>
-	
-   <style>
-	
-      body { 
-         background: #eee; 
-         padding: 5% 0; 
-      } 
-		
-      video { 
-         background: black; 
-         border: 1px solid gray; 
-      }
-		
-      .call-page { 
-         position: relative; 
-         display: block; 
-         margin: 0 auto; 
-         width: 500px; 
-         height: 500px; 
-      } 
-		
-      #localVideo { 
-         width: 150px; 
-         height: 150px; 
-         position: absolute; 
-         top: 15px; 
-         right: 15px; 
-      }
-		
-      #remoteVideo { 
-         width: 500px; 
-         height: 500px; 
-      }
-		
-   </style>
-	
-   <body>
-	
-   <div id = "loginPage" class = "container text-center"> 
-	
-      <div class = "row"> 
-         <div class = "col-md-4 col-md-offset-4">
-			
-            <h2>WebRTC Video Demo. Please sign in</h2> 
-            <label for = "usernameInput" class = "sr-only">Login</label> 
-            <input type = "email" id = "usernameInput" c
-               lass = "form-control formgroup" placeholder = "Login" 
-               required = "" autofocus = ""> 
-            <button id = "loginBtn" class = "btn btn-lg btn-primary btnblock">
-               Sign in</button>
-				
-         </div> 
-      </div> 
-		
-   </div>
-	
-   <div id = "callPage" class = "call-page"> 
-      <video id = "localVideo" autoplay playinline></video> 
-      <video id = "remoteVideo" autoplay playinline></video>
-		
-      <div class = "row text-center"> 
-         <div class = "col-md-12"> 
-            <input id = "callToUsernameInput" type = "text"
-               placeholder = "username to call" /> 
-            <button id = "callBtn" class = "btn-success btn">Call</button> 
-            <button id = "hangUpBtn" class = "btn-danger btn">Hang Up</button> 
-         </div>	
-      </div> 
-		
-   </div>
-	
-   <script src = "client.js"></script> 
-	   <script src = "https://cdnjs.cloudflare.com/ajax/libs/web-socket-js/1.0.0/web_socket.js"></script>
-	
-   </body>
-	
-</html>		  
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vijaya Simha — senior software engineer building AI agents, cloud platforms, and high-scale backend systems.">
+  <title>Vijaya Simha | Agentic AI & Platform Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Mono:wght@300;400;500&family=DM+Serif+Display:ital@0;1&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top"><i></i> VS.SYSTEMS <b>// ONLINE</b></a>
+    <nav aria-label="Primary navigation">
+      <a href="#now">now</a>
+      <a href="#work">work</a>
+      <a href="#journey">journey</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero page-section">
+      <div class="hero-copy">
+        <p class="scribble"><span>01</span> INITIALIZING PROFILE</p>
+        <h1>Engineering the <em>intelligent layer.</em></h1>
+        <p class="hero-intro">
+          Senior software engineer and technical leader building production AI agents,
+          cloud-native platforms, distributed backends, and real-time systems. Currently
+          at <strong>Microsoft</strong>, turning Azure AI Foundry and Copilot Studio into
+          useful, reliable enterprise automation.
+        </p>
+        <p class="margin-note">18+ years of systems thinking. <span>Scroll to explore ↓</span></p>
+      </div>
+
+      <aside class="portrait-card" aria-label="About Vijaya">
+        <div class="portrait">
+          <span class="portrait-code">IDENTITY // VERIFIED</span>
+          <div class="scan-line"></div>
+          <div class="orbit orbit-one">AGENTS</div>
+          <div class="orbit orbit-two">Java</div>
+          <div class="orbit orbit-three">Azure</div>
+          <div class="avatar">VS</div>
+        </div>
+        <p>VIJAYA SIMHA <span>AI + PLATFORM ENGINEER</span></p>
+      </aside>
+
+      <div class="quick-facts">
+        <div><span>based in</span><b>Redmond, Washington</b></div>
+        <div><span>core stack</span><b>Java, Python, TypeScript, cloud-native systems</b></div>
+        <div><span>cares about</span><b>useful AI, resilient systems, clear ownership</b></div>
+        <div><span>find me</span><b><a href="https://www.linkedin.com/in/pvijaysimha/" target="_blank" rel="noreferrer">LinkedIn ↗</a> · <a href="mailto:pvijaysimha@gmail.com">email ↗</a></b></div>
+      </div>
+    </section>
+
+    <section class="page-section" id="now">
+      <div class="section-marker">MODULE_01</div>
+      <p class="eyebrow">CURRENT SIGNALS</p>
+      <h2>What I'm <em>building now.</em></h2>
+      <p class="section-lede">The problems on my desk, the ideas in the margins, and the standards I bring to production.</p>
+
+      <div class="notes-grid">
+        <article class="note note-yellow">
+          <span>01 // BUILDING</span>
+          <h3>AI agents that do real work</h3>
+          <p>Grounded enterprise agents that call APIs, automate cross-application workflows, and operate with the permissions, observability, and guardrails production demands.</p>
+          <small>→ Azure AI Foundry + Copilot Studio + enterprise APIs</small>
+        </article>
+        <article class="note note-blue">
+          <span>02 // SIMPLIFYING</span>
+          <h3>Cloud onboarding</h3>
+          <p>I automated resource provisioning, RBAC assignment, and access configuration so teams could move from a seven-day onboarding path to roughly one hour.</p>
+          <small>→ the best platform work removes waiting</small>
+        </article>
+        <article class="note note-pink">
+          <span>03 // ENGINEERING FOR</span>
+          <h3>Systems that explain themselves</h3>
+          <p>Good software is observable. Great software makes failures legible: useful traces, honest metrics, clear boundaries, and a human handoff when automation reaches its limit.</p>
+          <small>→ boring at 3 AM is a feature</small>
+        </article>
+        <article class="note note-green">
+          <span>04 // EXPERIENCE LAYER</span>
+          <h3>18 years of engineering judgment</h3>
+          <p>From treasury systems and AML workflows to multiplayer platforms and GenAI: new technology is easier to ship when you recognize the old reliability problems hiding underneath.</p>
+          <small>→ architecture is memory applied carefully</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section" id="work">
+      <div class="section-marker">MODULE_02</div>
+      <p class="eyebrow">SELECTED PRODUCTION SYSTEMS</p>
+      <h2>Impact, <em>deployed.</em></h2>
+      <p class="section-lede">A few systems where the outcome mattered more than the slide deck. Open a card for the details.</p>
+
+      <div class="work-list">
+        <article class="case-study">
+          <div class="case-number">№ 01</div>
+          <div class="case-main">
+            <h3>Agentic Enterprise Automation</h3>
+            <p class="case-meta">2025—NOW · MICROSOFT · AZURE</p>
+            <p>Built a centralized API platform on AKS and integrated custom AI agents to automate workflows across internal applications.</p>
+            <div class="metrics">
+              <div><strong>7d→1h</strong><span>Onboarding</span></div>
+              <div><strong>50%</strong><span>Faster deploys</span></div>
+              <div><strong>35%</strong><span>Testing gain</span></div>
+            </div>
+            <button class="details-toggle" aria-expanded="false">▸ show the engineering notes</button>
+            <div class="case-details">
+              <h4>// what changed</h4>
+              <p>Standardized application data behind a central API layer, then exposed safe capabilities to Azure AI Foundry and Copilot Studio agents. Automated Azure resource provisioning, RBAC configuration, and access setup through self-service workflows.</p>
+              <h4>// my role</h4>
+              <ul>
+                <li>Architected the centralized API platform and AKS deployment model.</li>
+                <li>Integrated enterprise APIs with agentic workflows.</li>
+                <li>Built Azure DevOps pipelines for application and infrastructure delivery.</li>
+                <li>Designed automation around provisioning, access, and operational consistency.</li>
+              </ul>
+              <div class="tags"><span>AKS</span><span>Azure AI Foundry</span><span>Copilot Studio</span><span>AI Agents</span><span>Enterprise APIs</span><span>Azure DevOps</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-study">
+          <div class="case-number">№ 02</div>
+          <div class="case-main">
+            <h3>Cognitive & Edutainment Gaming Platform</h3>
+            <p class="case-meta">2024—2025 · TECHNICAL LEAD · REAL-TIME SYSTEMS</p>
+            <p>Led architecture and delivery for an interactive platform spanning real-time multiplayer, backend services, event streaming, analytics, and cloud operations.</p>
+            <div class="metrics">
+              <div><strong>12</strong><span>Engineers led</span></div>
+              <div><strong>20%</strong><span>Engagement lift</span></div>
+              <div><strong>25%</strong><span>Less downtime</span></div>
+            </div>
+            <button class="details-toggle" aria-expanded="false">▸ show the engineering notes</button>
+            <div class="case-details">
+              <h4>// architecture</h4>
+              <p>PhaserJS clients connected to SmartFoxServer for lobbies and matchmaking, with Spring Boot services for identity, progression, reporting, and cognitive metrics. Kafka handled asynchronous events while Grafana made platform health visible.</p>
+              <h4>// my role</h4>
+              <ul>
+                <li>Defined system architecture, API contracts, schemas, and messaging workflows.</li>
+                <li>Led frontend, backend, and database engineers through agile delivery.</li>
+                <li>Owned load testing, JWT security, Dockerization, AWS deployment, and post-launch optimization.</li>
+              </ul>
+              <div class="tags"><span>Java</span><span>Spring Boot</span><span>Kafka</span><span>PhaserJS</span><span>SmartFoxServer</span><span>AWS</span><span>Grafana</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-study">
+          <div class="case-number">№ 03</div>
+          <div class="case-main">
+            <h3>High-Concurrency Multiplayer Backend</h3>
+            <p class="case-meta">2021—2024 · PLATFORM LEAD · AWS</p>
+            <p>Improved Spring Boot and MySQL services supporting a large multiplayer product while leading engineering delivery, client collaboration, and production releases.</p>
+            <div class="metrics">
+              <div><strong>100K+</strong><span>Concurrent users</span></div>
+              <div><strong>30%</strong><span>Faster responses</span></div>
+              <div><strong>15</strong><span>Engineers mentored</span></div>
+            </div>
+            <button class="details-toggle" aria-expanded="false">▸ show the engineering notes</button>
+            <div class="case-details">
+              <h4>// the work</h4>
+              <p>Tuned high-traffic backend paths, evolved APIs and data access, coordinated Angular and React delivery, and improved the Jenkins-to-AWS release workflow.</p>
+              <h4>// leadership</h4>
+              <ul>
+                <li>Clarified team ownership and introduced stronger engineering processes.</li>
+                <li>Interviewed, supervised, and mentored a 15-person engineering team.</li>
+                <li>Worked directly with clients on requirements, support, and roadmap enhancements.</li>
+              </ul>
+              <div class="tags"><span>Spring Boot</span><span>MySQL</span><span>React</span><span>Angular</span><span>AWS</span><span>Jenkins</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section journey" id="journey">
+      <div class="section-marker">MODULE_03</div>
+      <p class="eyebrow">CAREER TRAJECTORY</p>
+      <h2>Systems across <em>eras.</em></h2>
+      <div class="timeline">
+        <article><time>2025—now</time><div><h3>Microsoft</h3><p>Senior Software Engineer · AI automation, centralized API platforms, AKS, Azure DevOps.</p></div></article>
+        <article><time>2021—2025</time><div><h3>Technical Leadership</h3><p>Led multiplayer and cognitive gaming platforms across Java, Kafka, React, AWS, Docker, and observability.</p></div></article>
+        <article><time>2014—2021</time><div><h3>Platform & Application Engineering</h3><p>Built admin, reporting, affiliate, game-management, and transaction systems across a growing product suite.</p></div></article>
+        <article><time>2005—2014</time><div><h3>Enterprise Foundations</h3><p>Treasury, portfolio management, AML, Java desktop, reporting, database, and client-delivery systems across India and Australia.</p></div></article>
+      </div>
+
+      <div class="toolbox">
+        <p class="eyebrow">TECHNOLOGY CONSTELLATION</p>
+        <div class="tool-cloud">
+          <span>Azure AI Foundry</span><span>Copilot Studio</span><span>Agentic AI</span><span>Java</span>
+          <span>Spring Boot</span><span>Python</span><span>AKS</span><span>AWS</span><span>Kafka</span>
+          <span>Docker</span><span>Kubernetes</span><span>LangChain</span><span>RAG</span>
+          <span>React</span><span>Angular</span><span>MySQL</span><span>Grafana</span><span>Prometheus</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section contact" id="contact">
+      <div class="section-marker">MODULE_04</div>
+      <p class="eyebrow">OPEN CHANNEL</p>
+      <h2>Let's build the <em>next system.</em></h2>
+      <p>I’m interested in senior and lead roles across AI engineering, backend platforms, developer productivity, and cloud architecture.</p>
+      <div class="contact-actions">
+        <a class="primary-button" href="mailto:pvijaysimha@gmail.com">Send an email ↗</a>
+        <a class="secondary-button" href="https://www.linkedin.com/in/pvijaysimha/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a class="secondary-button" href="Vijaya_Simha_ATS_Fixed.pdf" target="_blank">Résumé ↗</a>
+      </div>
+      <p class="signature">Vijaya Simha</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> VIJAYA SIMHA</span>
+    <span>SIGNAL END // REDMOND, WA</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
